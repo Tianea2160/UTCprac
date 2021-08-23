@@ -43,6 +43,19 @@ public class Application {
         }
         return Boolean.TRUE;
     }
+    private static int make_val(){
+        int val = 0;
+        int num1 = 0;
+        int num2 = 0;
+        int num3 = 0;
+        while(num1 ==num2 || num2 == num3 || num3 == num1){
+            num1 = RandomUtils.nextInt(1,9);
+            num2 = RandomUtils.nextInt(1,9);
+            num3 = RandomUtils.nextInt(1,9);
+        }
+        val = num1*100 + num2*10 + num3;
+        return val;
+    }
 
     public static void main(String[] args) {
         final Scanner scanner = new Scanner(System.in);
@@ -50,7 +63,7 @@ public class Application {
         String ans = null;
         int val1 = 0;
         //random num make
-        val1 = 100*RandomUtils.nextInt(1,9) + 10*RandomUtils.nextInt(1,9) + RandomUtils.nextInt(1,9);
+        val1 = make_val();
         String val = Integer.toString(val1);
         System.out.println();
         Boolean flag = Boolean.TRUE;
