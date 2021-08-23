@@ -1,7 +1,6 @@
 package baseball;
 
 import utils.RandomUtils;
-
 import java.util.Scanner;
 
 public class Application {
@@ -13,8 +12,8 @@ public class Application {
             //strike, ball 찾기
             int len = val.length();
             int strike = 0;
-            int ball=0;
-            for(int i=0;i < len; i++){
+            int ball = 0;
+            for(int i = 0;i < len; i++){
                 if(Character.toString(val.charAt(i)).equals(Character.toString(pred.charAt(i)))) strike++;
                 if(val.contains(Character.toString(pred.charAt(i)))) ball++;
             }
@@ -33,7 +32,7 @@ public class Application {
             ans = scanner.next();
         }
     }
-
+    //너무 절차지향적으로 코딩되어 있음 이부분을 나중에 좀더 좋은 방법으로 수정하고 싶음
     public static Boolean question(String ans, String val, Scanner scanner){
         if (print_res(val, ans)) {
             System.out.println("restart?(yes : 1, no : 2)");
@@ -43,6 +42,7 @@ public class Application {
         }
         return Boolean.TRUE;
     }
+    //랜덤 변수 만들기 함수
     private static int make_val(){
         int val = 0;
         int num1 = 0;
@@ -60,8 +60,8 @@ public class Application {
     public static void main(String[] args) {
         final Scanner scanner = new Scanner(System.in);
         // TODO 구현 진행
-        String ans = null;
-        int val1 = 0;
+        String ans;
+        int val1;
         //random num make
         val1 = make_val();
         String val = Integer.toString(val1);
