@@ -12,11 +12,10 @@ public class Application {
         do {
             baseBall = new BaseBall();
             do {
-                System.out.print("숫자를 입력해주세요 : ");
+                System.out.print("숫자를 입력해주세요 : ");git
                 ans = scanner.next();
                 baseBall.AnsFilter(ans, scanner);
             } while (!baseBall.compare(ans));
         } while (baseBall.askRestart(scanner));
-
     }
 }
